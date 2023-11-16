@@ -1,0 +1,33 @@
+Flow io.jans.agamasecuritykey.main
+    Basepath "agamasecuritykey"
+    Configs conf    //MFA settings
+
+Log "Identity agama-securitykey started"
+
+//authService = Call io.jans.as.server.service.AuthenticationService#class
+loginForm = { success: true }
+Repeat 3 times max
+    creds = RRF "main.ftlh" loginForm
+    userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
+    loginForm.username = creds.username
+
+    When userData is not null
+        obj = Trigger io.jans.agamasecuritykey.credsEnrollment userData conf true null
+        When obj.success is true
+            When obj.data.hadEnoughCreds is false
+                //let the user in, he just finished enrolling his creds
+                Finish creds.username
+
+            //Challenge the user to present his creds
+            obj = Trigger io.jans.agamasecuritykey.authenticator userData obj.data.mfaInfo
+            When obj.success is true
+                Finish creds.username
+            Finish obj
+
+        Otherwise
+            Finish obj
+    Otherwise
+        loginForm.success = false
+
+obj = { success: false, error: "Login attempt exceeded." }
+Finish obj

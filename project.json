@@ -1,0 +1,13 @@
+{
+  "projectName": "agama-securitykey",
+  "author": "Milton Ch.",
+  "type": "Community",
+  "version": "1.0.0",
+  "configs": {
+    "io.jans.agamasecuritykey.main": {
+      "supportedMethods": [
+        "fido2"
+      ]
+    }
+  }
+}
