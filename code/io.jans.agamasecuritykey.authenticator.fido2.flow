@@ -1,0 +1,18 @@
+Flow io.jans.agamasecuritykey.authenticator.fido2
+    Basepath "agamasecuritykey"
+    Inputs userData withEscape
+
+Log "Authenticator FIDO2 flow, started"
+
+jose = Call io.jans.agamasecuritykey.authn.FidoValidator#new
+assertion = Call jose assertionRequest userData.uid
+
+obj = { name: userData.name, escape: withEscape, assertion: assertion }
+obj = RRF "fido-authn.ftlh" obj
+
+When obj.skipped is ""
+    Finish false
+
+Call jose verify obj.tokenResponse
+
+Finish true

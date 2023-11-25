@@ -24,9 +24,8 @@ public class IdentityProcessor {
 
     private static final String INUM_ATTR = "inum";
     private static final String EXT_ATTR = "jansExtUid";
-        
-    public static Map<String, String> accountFromUid(String uid) {
 
+    public static Map<String, String> accountFromUid(String uid) {
         User user = getUser(UID, uid);
         logger.info("** -> User info: {}", user);
         boolean local = user != null;
@@ -50,19 +49,17 @@ public class IdentityProcessor {
         Map<String, String> result = Collections.emptyMap();
         logger.debug("Devuelve mapa vacio: {}", result);
         return null;
-
     }
 
     public static Map<String, String> remoteAccountDetails(String extUid) {
-        
         User user = getUser(EXT_ATTR, extUid);
         boolean remote = user != null;
-        
+
         Map<String, String> details = null;
         logger.debug("There is {} local account mapping to the remote account {}", remote ? "a" : "no", extUid);
-        
+
         if (remote) {
-            details = new HashMap<>();            
+            details = new HashMap<>();
 
             for (String attr : Arrays.asList(INUM_ATTR, UID, GIVEN_NAME)) {
                 String val = getSingleValuedAttr(user, attr);
@@ -72,50 +69,46 @@ public class IdentityProcessor {
             }
         }
         return details;
-
     }
-    
+
     public static String externalIdOf(String provider, String id) {
         return provider + ":" + id;
     }
-    
+
     public static String onboard(Map<String, String> profile, Set<String> attributes, String extUid)
-        throws Exception {
-        
+            throws Exception {
         User user = new User();
         if (StringHelper.isEmpty(profile.get(GIVEN_NAME))) throw new Exception("First name not provided");
 
         if (extUid != null) {
             user.setAttribute(EXT_ATTR, extUid, true);
         }
-        
+
         attributes.forEach(attr -> {
-                String val = profile.get(attr);
-                if (StringHelper.isNotEmpty(val)) {
-                    user.setAttribute(attr, val);
-                }
+            String val = profile.get(attr);
+            if (StringHelper.isNotEmpty(val)) {
+                user.setAttribute(attr, val);
+            }
         });
         UserService userService = CdiUtil.bean(UserService.class);
-        
+
         user = userService.addUser(user, true);
         if (user == null) throw new EntryNotFoundException("Added user not found");
-        
+
         return getSingleValuedAttr(user, INUM_ATTR);
-        
     }
 
     public static String link(String encInum, String extId) throws Exception {
-        
         EncryptionService ense = CdiUtil.bean(EncryptionService.class);
         String inum = ense.decrypt(encInum);
         logger.debug("Linking external user {} to local user {}", extId, inum);
-        
+
         User user = getUser(INUM_ATTR, inum);
         if (user == null) {
             logger.error("User identified with {} not found!", inum);
             throw new IOException("Target user for account linking does not exist");
         }
-        
+
         List<String> extUids = user.getAttributeValues(EXT_ATTR);
         if (extUids == null) {
             extUids = new ArrayList<>();
@@ -123,11 +116,10 @@ public class IdentityProcessor {
         extUids.add(extId);
         user.setAttribute(EXT_ATTR, extUids.toArray(new String[0]), true);
         //The setAttribute(String, List<String>, boolean) version does weird stuff when used from Groovy
-        
+
         UserService userService = CdiUtil.bean(UserService.class);
-        userService.updateUser(user);        
+        userService.updateUser(user);
         return getSingleValuedAttr(user, UID);
-        
     }
 
     private static User getUser(String attributeName, String value) {
@@ -136,16 +128,13 @@ public class IdentityProcessor {
     }
 
     private static String getSingleValuedAttr(User user, String attribute) {
-
         Object value = null;
         if (attribute.equals(UID)) {
             //user.getAttribute("uid", true, false) always returns null :(
             value = user.getUserId();
         } else {
-            value = user.getAttribute(attribute, true, false); 
+            value = user.getAttribute(attribute, true, false);
         }
         return value == null ? null : value.toString();
-
     }
-    
 }
