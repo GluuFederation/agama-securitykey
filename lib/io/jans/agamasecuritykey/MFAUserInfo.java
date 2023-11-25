@@ -50,5 +50,4 @@ public class MFAUserInfo {
     public void setPreference(String preference) {
         this.preference = preference;
     }
-
 }

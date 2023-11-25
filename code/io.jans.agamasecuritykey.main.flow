@@ -1,31 +1,31 @@
 Flow io.jans.agamasecuritykey.main
     Basepath "agamasecuritykey"
-    Configs conf    //MFA settings
 
-Log "Identity agama-securitykey started"
+Log "Main flow, started"
 
-//authService = Call io.jans.as.server.service.AuthenticationService#class
 loginForm = { success: true }
+casaApi = Call io.jans.agamasecuritykey.CasaApi#new
 Repeat 3 times max
     creds = RRF "main.ftlh" loginForm
     userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
     loginForm.username = creds.username
 
     When userData is not null
-        obj = Trigger io.jans.agamasecuritykey.credsEnrollment userData conf true null
-        When obj.success is true
-            When obj.data.hadEnoughCreds is false
-                //let the user in, he just finished enrolling his creds
-                Finish creds.username
+        inum = userData.inum
+        uid = userData.uid
+        mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+        count = mfaInfo.count
+        Log "User % has % credentials enrolled" inum count
 
-            //Challenge the user to present his creds
-            obj = Trigger io.jans.agamasecuritykey.authenticator userData obj.data.mfaInfo
-            When obj.success is true
-                Finish creds.username
+        When count is 0
+            obj = { success: false, error: "Your account has no security key configured." }
             Finish obj
 
-        Otherwise
-            Finish obj
+        fidoAuth = Trigger io.jans.agamasecuritykey.authenticator.fido2 userData true
+        Log "Response %s" fidoAuth
+        When fidoAuth.success is true
+            Finish uid
+
     Otherwise
         loginForm.success = false
 
