@@ -1,6 +1,20 @@
 {
     "projectName": "agama-securitykey",
-    "author": "Milton Ch.",
-    "type": "Community",
-    "version": "1.0.0"
+    "description": "Agama Security Key",
+    "type": "community",
+    "author": "Milton-Ch",
+    "version": "0.0.1",
+    "authorWebsite": "https://github.com/GluuFederation/agama-security-key",
+    "githubUri": "https://github.com/GluuFederation/agama-security-key",
+    "license": "apache-2.0",
+    "lastUpdated": "1701222815794",
+    "tags": [
+        "authentication",
+        "authorization"
+    ],
+    "noDirectLaunch": [],
+    "configs": {
+        "io.jans.agamasecuritykey.main": {}
+    },
+    "name": "agama-securitykey"
 }
