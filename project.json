@@ -14,7 +14,8 @@
     ],
     "noDirectLaunch": [],
     "configs": {
-        "io.jans.agamasecuritykey.main": {}
+        "io.jans.agamasecuritykey.main": {},
+        "io.jans.agamasecuritykey.authenticator.fido2": {}
     },
     "name": "agama-securitykey"
 }
