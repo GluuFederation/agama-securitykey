@@ -14,5 +14,5 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User %s has % credentials enrolled" inum count
           When count is 0
-               it_ansnx = { success: false, error: "Your account has no security key configured." }
-               Finish it_ansnx
+               it_llkrf = { success: false, error: "Your account has no security key configured." }
+               Finish it_llkrf
