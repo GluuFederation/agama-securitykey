@@ -1,6 +1,6 @@
 Flow io.jans.agamasecuritykey.authenticator.fido2
      Basepath ""
      Inputs userData withEscape
-Log "@debug " Authenticator FIDO2 flow started
+Log "@debug " Authenticator FIDO2 flow Started!
 jose = Call io.jans.agamasecuritykey.authn.FidoValidator#new 
 assertion = Call jose assertionRequest userData.uid
