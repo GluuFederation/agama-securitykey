@@ -7,3 +7,4 @@ assertion = Call jose assertionRequest userData.uid
 obj = { name: userData.name, escape: withEscape, assertion: assertion }
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
+     Finish false
