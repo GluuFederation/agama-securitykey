@@ -1,6 +1,6 @@
 Flow io.jans.agamasecuritykey.authenticator.fido2
      Basepath ""
-Log "@debug " Main flow Started
+Log "@debug Main flow Started!"
 loginForm = { success: true }
 casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
 Repeat 3 times max
@@ -11,3 +11,5 @@ Repeat 3 times max
           inum = userData.inum
           uid = userData.uid
           mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          count = mfaInfo.count
+          Log "@debug User %s has % credentials enrolled" inum count
