@@ -70,7 +70,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -120,7 +121,8 @@
 				"handles": [
 					"Agama-when-Node-d557bce9-2e28-465d-a8b7-e00dedcea6b6.FAILURE",
 					"Agama-when-Node-d557bce9-2e28-465d-a8b7-e00dedcea6b6.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1416,8 +1418,8 @@
 		}
 	],
 	"viewport": {
-		"x": -275,
-		"y": -246,
+		"x": 2,
+		"y": 2,
 		"zoom": 1
 	}
 }
