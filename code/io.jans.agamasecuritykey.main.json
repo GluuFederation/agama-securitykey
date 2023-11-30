@@ -59,13 +59,14 @@
 					"maxIterationVariableName": "",
 					"logLevel": "debug",
 					"assignCallbackResult": "",
-					"displayName": "Started Log",
+					"displayName": "Main Started Log",
 					"nodeColor": "",
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
