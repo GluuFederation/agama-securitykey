@@ -5,3 +5,9 @@ loginForm = { success: true }
 casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
 Repeat 3 times max
      creds = RRF "main.ftlh" loginForm
+     userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
+     loginForm.username = creds.username
+     When userData is not null
+          inum = userData.inum
+          uid = userData.uid
+          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
