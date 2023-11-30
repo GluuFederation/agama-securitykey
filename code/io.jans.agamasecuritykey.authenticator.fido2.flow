@@ -1,12 +1,18 @@
 Flow io.jans.agamasecuritykey.authenticator.fido2
      Basepath ""
-     Inputs userData withEscape
-Log "@debug " Authenticator FIDO2 flow Started
-jose = Call io.jans.agamasecuritykey.authn.FidoValidator#new 
-assertion = Call jose assertionRequest userData.uid
-obj = { name: userData.name, escape: withEscape, assertion: assertion }
-obj = RRF "fido-authn.ftlh" obj
-When obj.skipped is ""
-     Finish false
-obj = Call jose verify obj.tokenResponse
-Finish true
+Log "@debug Main flow Started!"
+loginForm = { success: true }
+casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
+Repeat 3 times max
+     creds = RRF "main.ftlh" loginForm
+     userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
+     loginForm.username = creds.username
+     When userData is not null
+          inum = userData.inum
+          uid = userData.uid
+          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          count = mfaInfo.count
+          Log "@debug User %s has % credentials enrolled" inum count
+          When count is 0
+               it_dubch = { success: false, error: "Your account has no security key configured." }
+               Finish it_dubch
