@@ -158,7 +158,7 @@
 			"id": "Agama-log-Node-a4d7d4e8-9cf5-4c90-88bf-a01fa7ac3949",
 			"position": {
 				"x": 255,
-				"y": 31
+				"y": 30
 			},
 			"type": "log",
 			"data": {
@@ -169,7 +169,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": 255,
-					"y": 31
+					"y": 30
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-a4d7d4e8-9cf5-4c90-88bf-a01fa7ac3949",
@@ -197,7 +197,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "Authenticator FIDO2 flow started",
+					"logMessage": "Authenticator FIDO2 flow Started!",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -218,12 +218,12 @@
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 255,
-				"y": 31
+				"y": 30
 			},
 			"dragging": false
 		},
