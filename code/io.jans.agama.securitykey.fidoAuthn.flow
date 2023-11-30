@@ -3,4 +3,4 @@ Flow io.jans.agama.securitykey.fidoAuthn
      Inputs userData withEscape
 Log "@debug Fido Authn flow started!"
 jose = Call io.jans.agamasecuritykey.authn.FidoValidator#new 
-assertion = Call jose assertionRequest userData
+assertion = Call jose assertionRequest userData.uid
