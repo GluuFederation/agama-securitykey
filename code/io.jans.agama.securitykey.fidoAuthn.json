@@ -3,15 +3,15 @@
 		{
 			"width": 210,
 			"height": 140,
-			"id": "Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318",
+			"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"position": {
 				"x": 1230,
-				"y": 81
+				"y": 86
 			},
 			"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 			"type": "when",
 			"data": {
-				"id": "Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318",
+				"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 				"type": "Agama-when-Node",
 				"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 				"whenCondition": "",
@@ -21,7 +21,7 @@
 					"y": 81
 				},
 				"agamaData": {
-					"id": "Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318",
+					"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 					"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 					"type": "Agama-when-Node",
 					"assignments": [
@@ -35,19 +35,18 @@
 					"variableField": "obj.skipped",
 					"conditionInputField": "is",
 					"valueField": "\"\"",
-					"comment": "",
 					"hasComment": true
 				},
 				"handles": [
-					"Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318.FAILURE",
-					"Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318.SUCCESS"
+					"Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c.FAILURE",
+					"Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c.SUCCESS"
 				]
 			},
 			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1230,
-				"y": 81
+				"y": 86
 			}
 		},
 		{
@@ -594,6 +593,23 @@
 			"type": "straight",
 			"source": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 			"target": "Agama-when-Node-ae9939df-7ba2-4245-b2f5-12e511241318",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796-Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c-f300692e-6d3a-4cfc-a54f-64a8e9a054af",
+			"type": "straight",
+			"source": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
+			"target": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"label": "",
 			"labelBgPadding": [
 				8,
