@@ -2,3 +2,4 @@ Flow io.jans.agama.securitykey.fidoAuthn
      Basepath ""
      Inputs userData withEscape
 Log "@debug Fido Authn flow started!"
+loginForm = { success: true }
