@@ -1,2 +1,3 @@
 Flow io.jans.agama.securitykey.main
      Basepath ""
+Log "@debug Main flow started!"
