@@ -197,7 +197,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "Authenticator FIDO2 flow Started!",
+					"logMessage": "Authenticator FIDO2 flow Started",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -218,7 +218,7 @@
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": false
+				"skake": true
 			},
 			"selected": true,
 			"positionAbsolute": {
