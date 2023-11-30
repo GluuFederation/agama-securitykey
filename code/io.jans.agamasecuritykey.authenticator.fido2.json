@@ -66,9 +66,10 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "assertion"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 698,
@@ -141,7 +142,8 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "jose"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -195,7 +197,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "Authenticator FIDO2 flow, started",
+					"logMessage": "Authenticator FIDO2 flow started",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -215,7 +217,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": true
 			},
 			"selected": false,
 			"positionAbsolute": {
