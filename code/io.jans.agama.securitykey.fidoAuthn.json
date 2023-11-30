@@ -3,6 +3,80 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
+			"position": {
+				"x": 230,
+				"y": 29
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 230,
+					"y": 29
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
+					"type": "Agama-log-Node",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasRepeat": false,
+					"hasComment": true,
+					"hasNoRepeat": false,
+					"isTopLevelFlow": true,
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"parentId": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
+					"name": "",
+					"basepath": "",
+					"comment": "",
+					"notes": "",
+					"flowfilename": "",
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "",
+							"assignedVariableName": ""
+						}
+					],
+					"callType": "Call static method",
+					"arguments": [],
+					"logMessage": "\"Fido Authn flow started!\"",
+					"templatePath": "",
+					"maxIteration": "",
+					"idpAuthEndpoint": "",
+					"variableField": "",
+					"conditionInputField": "",
+					"valueField": "",
+					"returnVariable": "",
+					"javaClassName": "",
+					"javaMethodName": "",
+					"javaVariableName": "",
+					"maxIterationVariableName": "",
+					"logLevel": "debug",
+					"assignCallbackResult": "",
+					"displayName": "Log started",
+					"nodeColor": "",
+					"exceptionVariableField": "",
+					"hasExtraData": false,
+					"configParams": "{}",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": 230,
+				"y": 29
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 			"type": "start",
 			"sourcePosition": "right",
@@ -29,7 +103,13 @@
 					"comment": "",
 					"notes": "",
 					"flowfilename": "",
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "",
+							"assignedVariableName": ""
+						}
+					],
 					"callType": "Call static method",
 					"arguments": [],
 					"logMessage": "",
@@ -51,9 +131,11 @@
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
-					"flowname": "io.jans.agama.securitykey.fidoAuthn"
+					"flowname": "io.jans.agama.securitykey.fidoAuthn",
+					"nodeIcon": "material-symbols:line-start-square",
+					"inputs": "userData withEscape"
 				},
-				"skake": false
+				"skake": true
 			},
 			"position": {
 				"x": 30,
@@ -62,13 +144,33 @@
 			"positionAbsolute": {
 				"x": 30,
 				"y": 30
+			},
+			"selected": false,
+			"dragging": false
+		}
+	],
+	"edges": [
+		{
+			"id": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc-Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211-b3e92f78-ff12-49d3-9db5-312eaa80ab54",
+			"type": "straight",
+			"source": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
+			"target": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
 			}
 		}
 	],
-	"edges": [],
 	"viewport": {
-		"x": 10,
-		"y": 15,
+		"x": 62,
+		"y": 54,
 		"zoom": 1
 	}
 }
