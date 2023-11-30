@@ -1,33 +1,3 @@
-Flow io.jans.agamasecuritykey.main
-    Basepath "agamasecuritykey"
-
-Log "Main flow, started"
-
-loginForm = { success: true }
-casaApi = Call io.jans.agamasecuritykey.CasaApi#new
-Repeat 3 times max
-    creds = RRF "main.ftlh" loginForm
-    userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
-    loginForm.username = creds.username
-
-    When userData is not null
-        inum = userData.inum
-        uid = userData.uid
-        mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
-        count = mfaInfo.count
-        Log "User % has % credentials enrolled" inum count
-
-        When count is 0
-            obj = { success: false, error: "Your account has no security key configured." }
-            Finish obj
-
-        fidoAuth = Trigger io.jans.agamasecuritykey.authenticator.fido2 userData true
-        Log "Response %s" fidoAuth
-        When fidoAuth.success is true
-            Finish uid
-
-    Otherwise
-        loginForm.success = false
-
-obj = { success: false, error: "Login attempt exceeded." }
-Finish obj
+Flow io.jans.agamasecuritykey.authenticator.fido2
+     Basepath ""
+Log "@debug " Main flow Started
