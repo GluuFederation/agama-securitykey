@@ -1,3 +1,7 @@
 Flow io.jans.agamasecuritykey.authenticator.fido2
      Basepath ""
 Log "@debug " Main flow Started
+loginForm = { success: true }
+casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
+Repeat 3 times max
+     creds = RRF "main.ftlh" loginForm
