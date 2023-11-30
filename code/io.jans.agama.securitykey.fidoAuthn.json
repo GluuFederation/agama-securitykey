@@ -6,7 +6,7 @@
 			"id": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 			"position": {
 				"x": 630,
-				"y": 28
+				"y": 27
 			},
 			"type": "call",
 			"data": {
@@ -17,7 +17,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": 630,
-					"y": 28
+					"y": 27
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
@@ -44,7 +44,7 @@
 						}
 					],
 					"callType": "Call method on instance",
-					"arguments": "userData",
+					"arguments": "userData.uid",
 					"logMessage": "",
 					"templatePath": "",
 					"maxIteration": "",
@@ -59,20 +59,21 @@
 					"maxIterationVariableName": "",
 					"logLevel": "",
 					"assignCallbackResult": "",
-					"displayName": "FidoValidator assertionRequest method",
+					"displayName": "FidoValidator assertionRequest",
 					"nodeColor": "",
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "assertion"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 630,
-				"y": 28
+				"y": 27
 			}
 		},
 		{
@@ -141,7 +142,8 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "jose"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
