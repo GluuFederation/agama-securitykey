@@ -61,14 +61,15 @@
 					"maxIterationVariableName": "",
 					"logLevel": "",
 					"assignCallbackResult": "",
-					"displayName": "MfaInfo initialize",
+					"displayName": "CasaApi getMFAUserInfoByFido2",
 					"nodeColor": "",
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "mfaInfo"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
