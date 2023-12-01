@@ -10,3 +10,4 @@ Repeat 3 times max
      When userData is not null
           inum = userData.inum
           uid = userData.uid
+          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
