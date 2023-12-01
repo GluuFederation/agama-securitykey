@@ -11,3 +11,5 @@ Repeat 3 times max
           inum = userData.inum
           uid = userData.uid
           mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          count = mfaInfo.count
+          Log "@debug User %s has %s credentials enrolled" inum count
