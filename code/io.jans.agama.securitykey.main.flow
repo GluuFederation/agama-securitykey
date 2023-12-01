@@ -3,3 +3,6 @@ Flow io.jans.agama.securitykey.main
 Log "@debug Main flow started!"
 loginForm = { success: true }
 casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
+Repeat 3 times max
+     creds = RRF "main.ftlh" loginForm
+     userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
