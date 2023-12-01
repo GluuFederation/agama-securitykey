@@ -8,3 +8,5 @@ obj = { name: userData.name, escape: withEscape, assertion: assertion }
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
      Finish false
+obj = Call jose verify obj.tokenResponse
+Finish true
