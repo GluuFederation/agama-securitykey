@@ -3,9 +3,86 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
+			"position": {
+				"x": 2035,
+				"y": 486
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-assignment-Node-453d3af0-06ba-496a-9265-bdd2a96cc511",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 2035,
+					"y": 486
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
+					"type": "Agama-call-Node",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasRepeat": false,
+					"hasComment": true,
+					"hasNoRepeat": false,
+					"isTopLevelFlow": true,
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"parentId": "Agama-assignment-Node-453d3af0-06ba-496a-9265-bdd2a96cc511",
+					"name": "",
+					"basepath": "",
+					"comment": "",
+					"notes": "",
+					"flowfilename": "",
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "",
+							"assignedVariableName": ""
+						}
+					],
+					"callType": "Call method on instance",
+					"arguments": [
+						"inum"
+					],
+					"logMessage": "",
+					"templatePath": "",
+					"maxIteration": "",
+					"idpAuthEndpoint": "",
+					"variableField": "",
+					"conditionInputField": "",
+					"valueField": "",
+					"returnVariable": "",
+					"javaClassName": "",
+					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaVariableName": "casaApi",
+					"maxIterationVariableName": "",
+					"logLevel": "",
+					"assignCallbackResult": "",
+					"displayName": "MfaInfo initialize",
+					"nodeColor": "",
+					"exceptionVariableField": "",
+					"hasExtraData": false,
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "mfaInfo"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2035,
+				"y": 486
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-assignment-Node-453d3af0-06ba-496a-9265-bdd2a96cc511",
 			"position": {
-				"x": 1837,
+				"x": 1835,
 				"y": 486
 			},
 			"type": "assignment",
@@ -16,7 +93,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 1837,
+					"x": 1835,
 					"y": 486
 				},
 				"agamaData": {
@@ -65,12 +142,13 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1837,
+				"x": 1835,
 				"y": 486
 			}
 		},
@@ -139,9 +217,10 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1637,
 				"y": 486
@@ -189,7 +268,8 @@
 				"handles": [
 					"Agama-when-Node-ebb3dc63-b8f3-4405-b1cc-4c3c541feadc.FAILURE",
 					"Agama-when-Node-ebb3dc63-b8f3-4405-b1cc-4c3c541feadc.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -263,7 +343,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -965,11 +1046,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-assignment-Node-453d3af0-06ba-496a-9265-bdd2a96cc511-Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4-7984ac80-be97-4eef-a501-3be6ec51ed16",
+			"type": "straight",
+			"source": "Agama-assignment-Node-453d3af0-06ba-496a-9265-bdd2a96cc511",
+			"target": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -1137,
-		"y": -157,
+		"x": -1418,
+		"y": -121,
 		"zoom": 1
 	}
 }
