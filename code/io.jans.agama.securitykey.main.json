@@ -70,9 +70,10 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1080,
@@ -84,8 +85,8 @@
 			"height": 122,
 			"id": "finish-35163906-b1cf-4a51-aad2-e091c4a86a25",
 			"position": {
-				"x": 3396,
-				"y": 661
+				"x": 3501,
+				"y": 565
 			},
 			"type": "finish",
 			"data": {
@@ -99,8 +100,8 @@
 					"Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.SUCCESS"
 				],
 				"position": {
-					"x": 3396,
-					"y": 661
+					"x": 3501,
+					"y": 565
 				},
 				"agamaData": {
 					"id": "finish-35163906-b1cf-4a51-aad2-e091c4a86a25",
@@ -155,8 +156,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3396,
-				"y": 661
+				"x": 3501,
+				"y": 565
 			}
 		},
 		{
@@ -164,8 +165,8 @@
 			"height": 140,
 			"id": "Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018",
 			"position": {
-				"x": 3283,
-				"y": 431
+				"x": 3291,
+				"y": 486
 			},
 			"parentId": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
 			"type": "when",
@@ -176,8 +177,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 3283,
-					"y": 431
+					"x": 3291,
+					"y": 486
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018",
@@ -206,8 +207,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3283,
-				"y": 431
+				"x": 3291,
+				"y": 486
 			}
 		},
 		{
@@ -367,8 +368,8 @@
 			"height": 122,
 			"id": "finish-b0730d9c-be75-4311-a96d-e7f8f401e4ff",
 			"position": {
-				"x": 2748,
-				"y": 716
+				"x": 2758,
+				"y": 720
 			},
 			"type": "finish",
 			"data": {
@@ -382,8 +383,8 @@
 					"Agama-when-Node-f506e361-5ab3-499c-bb6b-e0ccc49e5ad1.SUCCESS"
 				],
 				"position": {
-					"x": 2748,
-					"y": 716
+					"x": 2758,
+					"y": 720
 				},
 				"agamaData": {
 					"id": "finish-b0730d9c-be75-4311-a96d-e7f8f401e4ff",
@@ -438,8 +439,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2748,
-				"y": 716
+				"x": 2758,
+				"y": 720
 			}
 		},
 		{
@@ -1871,8 +1872,8 @@
 		}
 	],
 	"viewport": {
-		"x": -508,
-		"y": 114,
+		"x": -2059,
+		"y": -231,
 		"zoom": 1
 	}
 }
