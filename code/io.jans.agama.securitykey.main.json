@@ -70,9 +70,10 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3396,
@@ -120,7 +121,8 @@
 				"handles": [
 					"Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.FAILURE",
 					"Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -827,7 +829,10 @@
 					"conditionInputField": "is not",
 					"valueField": "null",
 					"hasComment": true,
-					"hasSuccess": true
+					"hasSuccess": "",
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"handles": [
 					"Agama-when-Node-ebb3dc63-b8f3-4405-b1cc-4c3c541feadc.FAILURE",
@@ -1769,8 +1774,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3047,
-		"y": -347,
+		"x": -1409,
+		"y": -89,
 		"zoom": 1
 	}
 }
