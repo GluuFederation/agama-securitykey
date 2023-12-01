@@ -14,6 +14,7 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User %s has %s credentials enrolled" inum count
           When count is 0
-               it_poeax = { success: false, error: "Your account has no security key configured." }
-               Finish it_poeax
+               it_cjmmd = { success: false, error: "Your account has no security key configured." }
+               Finish it_cjmmd
           fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn true
+          Log "@debug Response FidoAuthn %s" fidoAuthn
