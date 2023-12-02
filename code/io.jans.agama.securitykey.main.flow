@@ -12,13 +12,13 @@ Repeat 3 times max
           uid = userData.uid
           mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
           count = mfaInfo.count
-          Log "@debug User %s has %s credentials enrolled" inum count
+          Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_bcgwn = { success: false, error: "Your account has no security key configured." }
-               Finish it_bcgwn
+               it_ikfks = { success: false, error: "Your account has no security key configured." }
+               Finish it_ikfks
           fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn true
-          Log "@debug Response FidoAuthn %s" fidoAuthn
+          Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
                Finish uid
-it_dgziu = { success: false, error: "Login attempt exceeded." }
-Finish it_dgziu
+it_wiqbh = { success: false, error: "Login attempt exceeded." }
+Finish it_wiqbh
