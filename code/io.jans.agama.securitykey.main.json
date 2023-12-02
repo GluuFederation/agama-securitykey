@@ -256,7 +256,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "\"Response FidoAuthn %s\" fidoAuthn",
+					"logMessage": "\"Response FidoAuthn %\" fidoAuthn",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -279,7 +279,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3084,
@@ -540,7 +540,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "\"User %s has %s credentials enrolled\" inum count",
+					"logMessage": "\"User % has % credentials enrolled\" inum count",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -1872,8 +1872,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2059,
-		"y": -231,
+		"x": -2119,
+		"y": -336,
 		"zoom": 1
 	}
 }
