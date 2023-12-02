@@ -1,4 +1,4 @@
-package io.jans.agamasecuritykey;
+package io.jans.agama.securitykey;
 
 import io.jans.as.common.model.common.User;
 import io.jans.as.common.service.common.EncryptionService;

@@ -1,4 +1,4 @@
-package io.jans.agamasecuritykey;
+package io.jans.agama.securitykey;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

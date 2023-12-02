@@ -1,4 +1,4 @@
-package io.jans.agamasecuritykey;
+package io.jans.agama.securitykey;
 
 import com.nimbusds.oauth2.sdk.ParseException;
 import com.nimbusds.oauth2.sdk.http.HTTPRequest;
