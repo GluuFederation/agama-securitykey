@@ -498,7 +498,7 @@
 			"height": 122,
 			"id": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
 			"position": {
-				"x": 2035,
+				"x": 2033,
 				"y": 486
 			},
 			"type": "call",
@@ -509,7 +509,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 2035,
+					"x": 2033,
 					"y": 486
 				},
 				"agamaData": {
@@ -564,10 +564,10 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2035,
+				"x": 2033,
 				"y": 486
 			}
 		},
@@ -894,7 +894,9 @@
 						}
 					],
 					"callType": "Call static method",
-					"arguments": "creds.username",
+					"arguments": [
+						"creds.username"
+					],
 					"logMessage": "",
 					"templatePath": "",
 					"maxIteration": "",
@@ -903,7 +905,7 @@
 					"conditionInputField": "",
 					"valueField": "",
 					"returnVariable": "",
-					"javaClassName": "io.jans.agamasecuritykey.IdentityProcessor",
+					"javaClassName": "io.jans.agama.securitykey.IdentityProcessor",
 					"javaMethodName": "accountFromUid",
 					"javaVariableName": "",
 					"maxIterationVariableName": "",
@@ -1131,7 +1133,7 @@
 					"conditionInputField": "",
 					"valueField": "",
 					"returnVariable": "",
-					"javaClassName": "io.jans.agamasecuritykey.CasaApi",
+					"javaClassName": "io.jans.agama.securitykey.CasaApi",
 					"javaMethodName": "",
 					"javaVariableName": "",
 					"maxIterationVariableName": "",
@@ -1593,7 +1595,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -2067,8 +2070,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1548,
-		"y": -340,
+		"x": -2648,
+		"y": -266,
 		"zoom": 1
 	}
 }
