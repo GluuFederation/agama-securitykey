@@ -67,7 +67,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -136,7 +137,8 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "obj"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -557,7 +559,7 @@
 					"conditionInputField": "",
 					"valueField": "",
 					"returnVariable": "",
-					"javaClassName": "io.jans.agamasecuritykey.authn.FidoValidator",
+					"javaClassName": "io.jans.agama.securitykey.authn.FidoValidator",
 					"javaMethodName": "",
 					"javaVariableName": "",
 					"maxIterationVariableName": "",
@@ -573,7 +575,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 430,
@@ -905,8 +907,8 @@
 		}
 	],
 	"viewport": {
-		"x": -616,
-		"y": 86,
+		"x": -57,
+		"y": 111,
 		"zoom": 1
 	}
 }
