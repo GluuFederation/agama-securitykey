@@ -2,10 +2,10 @@ Flow io.jans.agama.securitykey.main
      Basepath ""
 Log "@debug Main flow started!"
 loginForm = { success: true }
-casaApi = Call io.jans.agamasecuritykey.CasaApi#new 
+casaApi = Call io.jans.agama.securitykey.CasaApi#new 
 Repeat 3 times max
      creds = RRF "main.ftlh" loginForm
-     userData = Call io.jans.agamasecuritykey.IdentityProcessor#accountFromUid creds.username
+     userData = Call io.jans.agama.securitykey.IdentityProcessor#accountFromUid creds.username
      loginForm.username = creds.username
      When userData is not null
           inum = userData.inum
@@ -15,12 +15,12 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_jamiw = { success: false, error: "Your account has no security key configured." }
-               Finish it_jamiw
+               it_vhyhm = { success: false, error: "Your account has no security key configured." }
+               Finish it_vhyhm
           withEscape = true
           fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn userData withEscape
           Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
                Finish uid
-it_lwdyd = { success: false, error: "Login attempt exceeded." }
-Finish it_lwdyd
+it_nstnt = { success: false, error: "Login attempt exceeded." }
+Finish it_nstnt
