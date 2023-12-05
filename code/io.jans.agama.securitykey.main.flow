@@ -16,12 +16,13 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_rzbjl = { success: false, error: "Your account has no security key configured." }
-               Finish it_rzbjl
+               it_dkqym = { success: false, error: "Your account has no security key configured." }
+               Finish it_dkqym
           withEscape = true
           fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn userData withEscape
           Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
                Finish uid
-it_nqdcd = { success: false, error: "Login attempt exceeded." }
-Finish it_nqdcd
+     loginForm.success = false
+it_qsevw = { success: false, error: "Login attempt exceeded." }
+Finish it_qsevw
