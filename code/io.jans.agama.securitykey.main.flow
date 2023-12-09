@@ -1,0 +1,28 @@
+Flow io.jans.agama.securitykey.main
+     Basepath ""
+Log "@debug Main flow started!"
+loginForm = { success: true }
+casaApi = Call io.jans.agama.securitykey.CasaApi#new 
+Repeat 3 times max
+     creds = RRF "main.ftlh" loginForm
+     userData = Call io.jans.agama.securitykey.IdentityProcessor#accountFromUid creds.username
+     Log "@debug UserData %" userData
+     loginForm.username = creds.username
+     When userData is not null
+          inum = userData.inum
+          uid = userData.uid
+          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          Log "@debug MfaInfo response: %" mfaInfo
+          count = mfaInfo.count
+          Log "@debug User % has % credentials enrolled" inum count
+          When count is 0
+               it_aagka = { success: false, error: "Your account has no security key configured." }
+               Finish it_aagka
+          withEscape = true
+          fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn userData withEscape
+          Log "@debug Response FidoAuthn %" fidoAuthn
+          When fidoAuthn.success is true
+               Finish uid
+     loginForm.success = false
+it_sxdfm = { success: false, error: "Login attempt exceeded." }
+Finish it_sxdfm
