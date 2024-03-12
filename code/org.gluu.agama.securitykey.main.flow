@@ -1,11 +1,11 @@
-Flow io.jans.agama.securitykey.main
+Flow org.gluu.agama.securitykey.main
      Basepath ""
 Log "@debug Main flow started!"
 loginForm = { success: true }
-casaApi = Call io.jans.agama.securitykey.CasaApi#new 
+casaApi = Call org.gluu.agama.securitykey.CasaApi#new
 Repeat 3 times max
      creds = RRF "main.ftlh" loginForm
-     userData = Call io.jans.agama.securitykey.IdentityProcessor#accountFromUid creds.username
+     userData = Call org.gluu.agama.securitykey.IdentityProcessor#accountFromUid creds.username
      Log "@debug UserData %" userData
      loginForm.username = creds.username
      When userData is not null
@@ -19,7 +19,7 @@ Repeat 3 times max
                it_aagka = { success: false, error: "Your account has no security key configured." }
                Finish it_aagka
           withEscape = true
-          fidoAuthn = Trigger io.jans.agama.securitykey.fidoAuthn userData withEscape
+          fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
           Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
                Finish uid
