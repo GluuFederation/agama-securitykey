@@ -1,4 +1,4 @@
-package io.jans.agama.securitykey;
+package org.gluu.agama.securitykey;
 
 import com.nimbusds.oauth2.sdk.http.HTTPRequest;
 import com.nimbusds.oauth2.sdk.http.HTTPResponse;

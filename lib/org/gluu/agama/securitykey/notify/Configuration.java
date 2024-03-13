@@ -1,4 +1,4 @@
-package io.jans.agama.securitykey.notify;
+package org.gluu.agama.securitykey.notify;
 
 import com.nimbusds.jose.*;
 import com.nimbusds.jwt.*;

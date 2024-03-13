@@ -1,4 +1,4 @@
-package io.jans.agama.securitykey.authn;
+package org.gluu.agama.securitykey.authn;
 
 import io.jans.fido2.client.AssertionService;
 import io.jans.fido2.client.Fido2ClientFactory;

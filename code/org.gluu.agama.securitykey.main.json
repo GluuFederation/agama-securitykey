@@ -905,7 +905,7 @@
 					"conditionInputField": "",
 					"valueField": "",
 					"returnVariable": "",
-					"javaClassName": "io.jans.agama.securitykey.IdentityProcessor",
+					"javaClassName": "org.gluu.agama.securitykey.IdentityProcessor",
 					"javaMethodName": "accountFromUid",
 					"javaVariableName": "",
 					"maxIterationVariableName": "",
@@ -1133,7 +1133,7 @@
 					"conditionInputField": "",
 					"valueField": "",
 					"returnVariable": "",
-					"javaClassName": "io.jans.agama.securitykey.CasaApi",
+					"javaClassName": "org.gluu.agama.securitykey.CasaApi",
 					"javaMethodName": "",
 					"javaVariableName": "",
 					"maxIterationVariableName": "",
@@ -1357,7 +1357,7 @@
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
-					"flowname": "io.jans.agama.securitykey.main"
+					"flowname": "org.gluu.agama.securitykey.main"
 				},
 				"skake": false
 			},
@@ -1515,7 +1515,7 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "io.jans.agama.securitykey.fidoAuthn",
+					"flowFileName": "org.gluu.agama.securitykey.fidoAuthn",
 					"asssignedVariableName": "fidoAuthn"
 				},
 				"skake": false
