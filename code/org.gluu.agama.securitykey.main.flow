@@ -9,22 +9,20 @@ loginForm = { success: true }
 casaApi = Call org.gluu.agama.securitykey.CasaApi#new 
 // Repeat a maximum of 3 times
 Repeat 3 times max
+     // Load main.ftlh page and pass loginForm
      creds = RRF "main.ftlh" loginForm
+     // Retrieves the user's information by username
      userData = Call org.gluu.agama.securitykey.IdentityProcessor#accountFromUid creds.username
+     // Mark logs of collected user data
      Log "@debug UserData %" userData
+     // Assign loginForm.username = creds.username
      loginForm.username = creds.username
      When userData is not null
+          // Initialization of inum and uid
           inum = userData.inum
           uid = userData.uid
-          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
-          Log "@debug MfaInfo response: %" mfaInfo
-          count = mfaInfo.count
-          Log "@debug User % has % credentials enrolled" inum count
-          When count is 0
-               it_qtack = {success:false, error: "Your account has no security key configured."}
-               Finish it_qtack
-          withEscape = true
+     // Set the loginForm success field to false
      loginForm.success = false
 // When the maximum number of attempts has been made, the flow will end.
-it_bapfq = {success:false, error: "Login attempt exceeded."}
-Finish it_bapfq
+it_bmqcr = {success:false, error: "Login attempt exceeded."}
+Finish it_bmqcr
