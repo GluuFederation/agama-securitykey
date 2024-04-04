@@ -1,8 +1,13 @@
+// Main flow that handles all other flows
 Flow org.gluu.agama.securitykey.main
      Basepath ""
+// Mark startup logs
 Log "@debug Main flow started!"
+// loginForm variable declaration, which is sent to the main form
 loginForm = { success: true }
-casaApi = Call org.gluu.agama.securitykey.CasaApi#new
+// Get instance CasaApi
+casaApi = Call org.gluu.agama.securitykey.CasaApi#new 
+// Repeat a maximum of 3 times
 Repeat 3 times max
      creds = RRF "main.ftlh" loginForm
      userData = Call org.gluu.agama.securitykey.IdentityProcessor#accountFromUid creds.username
@@ -16,13 +21,10 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_aagka = { success: false, error: "Your account has no security key configured." }
-               Finish it_aagka
+               it_qtack = {success:false, error: "Your account has no security key configured."}
+               Finish it_qtack
           withEscape = true
-          fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
-          Log "@debug Response FidoAuthn %" fidoAuthn
-          When fidoAuthn.success is true
-               Finish uid
      loginForm.success = false
-it_sxdfm = { success: false, error: "Login attempt exceeded." }
-Finish it_sxdfm
+// When the maximum number of attempts has been made, the flow will end.
+it_bapfq = {success:false, error: "Login attempt exceeded."}
+Finish it_bapfq
