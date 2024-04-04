@@ -24,5 +24,5 @@ Repeat 3 times max
      // Set the loginForm success field to false
      loginForm.success = false
 // When the maximum number of attempts has been made, the flow will end.
-it_ebpuk = {success:false, error: "Login attempt exceeded."}
-Finish it_ebpuk
+it_wizqv = {success:false, error: "Login attempt exceeded."}
+Finish it_wizqv
