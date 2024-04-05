@@ -1,12 +1,16 @@
+// This flow is responsible for validation with the security key device
 Flow org.gluu.agama.securitykey.fidoAuthn
      Basepath ""
      Inputs userData withEscape
+// Mark log started
 Log "@debug Fido Authn flow started!"
-jose = Call org.gluu.agama.securitykey.authn.FidoValidator#new
+jose = Call org.gluu.agama.securitykey.authn.FidoValidator#new 
 assertion = Call jose assertionRequest userData.uid
 obj = { name: userData.name, escape: withEscape, assertion: assertion }
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
-     Finish false
+     it_kcyoq = {success:false, error: "false"}
+     Finish it_kcyoq
 obj = Call jose verify obj.tokenResponse
-Finish true
+it_dgezg = {success:false, error: "true"}
+Finish it_dgezg
