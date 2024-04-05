@@ -138,7 +138,7 @@
 					"logLevel": "",
 					"assignCallbackResult": "",
 					"displayName": "LoginForm set false",
-					"nodeColor": "",
+					"nodeColor": "#eb999a",
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
@@ -146,7 +146,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1983,
@@ -511,7 +511,7 @@
 					"logLevel": "",
 					"assignCallbackResult": "",
 					"displayName": "Finish count 0",
-					"nodeColor": "",
+					"nodeColor": "#eb999a",
 					"exceptionVariableField": "",
 					"finishMode": "withFailure",
 					"hasExtraData": false,
@@ -2306,8 +2306,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1522.1505084644582,
-		"y": -103.05887200624647,
-		"zoom": 0.6241652744508059
+		"x": 413.7518603249657,
+		"y": -36.78984558399344,
+		"zoom": 0.8705505632961246
 	}
 }
