@@ -2,15 +2,19 @@
 Flow org.gluu.agama.securitykey.fidoAuthn
      Basepath ""
      Inputs userData withEscape
-// Mark log started
+// Mark startup logs
 Log "@debug Fido Authn flow started!"
+// Get instance FidoValidator
 jose = Call org.gluu.agama.securitykey.authn.FidoValidator#new 
+// Generates the assertionRequest record to initiate validation
 assertion = Call jose assertionRequest userData.uid
+// "obj" variable declaration to be sent to validation view
 obj = { name: userData.name, escape: withEscape, assertion: assertion }
+// Load fido-authn page and pass "obj"
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
-     it_kcyoq = {success:false, error: "false"}
-     Finish it_kcyoq
+     it_vmygv = {success:false, error: "false"}
+     Finish it_vmygv
 obj = Call jose verify obj.tokenResponse
-it_dgezg = {success:false, error: "true"}
-Finish it_dgezg
+it_nwmgj = {success:false, error: "true"}
+Finish it_nwmgj
