@@ -2,7 +2,7 @@
 	"nodes": [
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "finish-2a56b16a-c2c1-41af-ae9b-a13af37a9d0a",
 			"position": {
 				"x": 1685,
@@ -79,7 +79,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-1aeb4a1a-0c47-4fe9-8e9d-ce6078806f5b",
 			"position": {
 				"x": 1485,
@@ -149,7 +149,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "finish-de636519-7305-41a5-89ae-c11536a5c7e1",
 			"position": {
 				"x": 1486,
@@ -220,7 +220,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1486,
 				"y": 232
@@ -228,8 +228,8 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"position": {
 				"x": 1235,
@@ -264,7 +264,15 @@
 					"valueField": "\"\"",
 					"hasComment": true,
 					"hasSuccess": true,
-					"hasFailure": true
+					"hasFailure": true,
+					"conditions": [
+						{
+							"variable": "obj.skipped",
+							"operator": "is",
+							"dataValue": "\"\"",
+							"combinator": "none"
+						}
+					]
 				},
 				"handles": [
 					"Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c.FAILURE",
@@ -281,7 +289,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 			"position": {
 				"x": 1030,
@@ -357,7 +365,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-assignment-Node-7d6402d1-120f-498c-b174-77079338be46",
 			"position": {
 				"x": 830,
@@ -432,7 +440,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 			"position": {
 				"x": 630,
@@ -508,7 +516,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
 			"position": {
 				"x": 430,
@@ -584,7 +592,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
 			"position": {
 				"x": 230,
@@ -615,7 +623,7 @@
 					"parentId": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Mark log started",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -650,7 +658,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 230,
 				"y": 28
@@ -659,7 +667,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 			"type": "start",
 			"sourcePosition": "right",
@@ -683,7 +691,7 @@
 					"inRepeatBlock": false,
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "This flow is responsible for validation with the security key device",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -716,7 +724,8 @@
 					"configParams": "{}",
 					"flowname": "org.gluu.agama.securitykey.fidoAuthn",
 					"nodeIcon": "material-symbols:line-start-square",
-					"inputs": "userData withEscape"
+					"inputs": "userData withEscape",
+					"timeout": ""
 				},
 				"skake": false
 			},
@@ -907,8 +916,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1053,
-		"y": 23,
-		"zoom": 1
+		"x": -273.16666666666674,
+		"y": 53,
+		"zoom": 2
 	}
 }
