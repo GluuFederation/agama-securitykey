@@ -320,7 +320,7 @@
 					"parentId": "Agama-assignment-Node-7d6402d1-120f-498c-b174-77079338be46",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Load fido-authn page and pass \"obj\"",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -331,7 +331,9 @@
 						}
 					],
 					"callType": "Call static method",
-					"arguments": "obj",
+					"arguments": [
+						"obj"
+					],
 					"logMessage": "",
 					"templatePath": "fido-authn.ftlh",
 					"maxIteration": "",
@@ -396,7 +398,7 @@
 					"parentId": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "\"obj\" variable declaration to be sent to validation view",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -443,7 +445,7 @@
 			"height": 124,
 			"id": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 			"position": {
-				"x": 630,
+				"x": 629,
 				"y": 27
 			},
 			"type": "call",
@@ -454,7 +456,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 630,
+					"x": 629,
 					"y": 27
 				},
 				"agamaData": {
@@ -471,7 +473,7 @@
 					"parentId": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Generates the assertionRequest record to initiate validation",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -510,7 +512,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 630,
+				"x": 629,
 				"y": 27
 			}
 		},
@@ -520,7 +522,7 @@
 			"id": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
 			"position": {
 				"x": 430,
-				"y": 28
+				"y": 27.5
 			},
 			"type": "call",
 			"data": {
@@ -531,7 +533,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": 430,
-					"y": 28
+					"y": 27.5
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
@@ -547,7 +549,7 @@
 					"parentId": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Get instance FidoValidator",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -587,7 +589,7 @@
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 430,
-				"y": 28
+				"y": 27.5
 			}
 		},
 		{
@@ -623,7 +625,7 @@
 					"parentId": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 					"name": "",
 					"basepath": "",
-					"comment": "Mark log started",
+					"comment": "Mark startup logs",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -658,7 +660,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 230,
 				"y": 28
@@ -916,8 +918,8 @@
 		}
 	],
 	"viewport": {
-		"x": -273.16666666666674,
-		"y": 53,
+		"x": -1860.5,
+		"y": 81.66666666666663,
 		"zoom": 2
 	}
 }
