@@ -1,6 +1,31 @@
 {
 	"nodes": [
 		{
+			"width": 270,
+			"height": 68,
+			"id": "Agama-note-b2a6b60c-094c-4cb6-aa8b-36ef4906592b",
+			"position": {
+				"x": 1181,
+				"y": -50
+			},
+			"type": "notes",
+			"data": {
+				"id": "Agama-note-b2a6b60c-094c-4cb6-aa8b-36ef4906592b",
+				"type": "Agama-note",
+				"notes": "If the customer cancels the validation process the flow ends, otherwise the validation flow continues.",
+				"position": {
+					"x": 1181,
+					"y": -50
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": 1181,
+				"y": -50
+			},
+			"dragging": false
+		},
+		{
 			"width": 170,
 			"height": 124,
 			"id": "finish-2a56b16a-c2c1-41af-ae9b-a13af37a9d0a",
@@ -34,7 +59,7 @@
 					"parentId": "Agama-call-Node-1aeb4a1a-0c47-4fe9-8e9d-ce6078806f5b",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Ends the flow correctly",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -110,12 +135,14 @@
 					"parentId": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Performs the verification after processing the security device",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [],
 					"callType": "Call method on instance",
-					"arguments": "obj.tokenResponse",
+					"arguments": [
+						"obj.tokenResponse"
+					],
 					"logMessage": "",
 					"templatePath": "",
 					"maxIteration": "",
@@ -211,7 +238,7 @@
 					"logLevel": "",
 					"assignCallbackResult": "",
 					"displayName": "Finish false",
-					"nodeColor": "",
+					"nodeColor": "#eb999a",
 					"exceptionVariableField": "",
 					"finishMode": "withFailure",
 					"hasExtraData": false,
@@ -232,7 +259,7 @@
 			"height": 60,
 			"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"position": {
-				"x": 1235,
+				"x": 1236.5,
 				"y": 81
 			},
 			"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
@@ -244,7 +271,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1235,
+					"x": 1236.5,
 					"y": 81
 				},
 				"agamaData": {
@@ -283,7 +310,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1235,
+				"x": 1236.5,
 				"y": 81
 			}
 		},
@@ -918,8 +945,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1860.5,
-		"y": 81.66666666666663,
-		"zoom": 2
+		"x": 147.32377000284862,
+		"y": 131.7641905356587,
+		"zoom": 0.6241652744508059
 	}
 }
