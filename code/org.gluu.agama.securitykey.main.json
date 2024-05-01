@@ -343,8 +343,8 @@
 			}
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
 			"position": {
 				"x": 3823,
@@ -387,7 +387,7 @@
 					],
 					"callType": "Call static method",
 					"arguments": [],
-					"logMessage": "\"Response FidoAuthn % % \" fidoAuthn,  fidoAuthn.success",
+					"logMessage": "\"Response FidoAuthn % % \" fidoAuthn  fidoAuthn.success",
 					"templatePath": "",
 					"maxIteration": "",
 					"idpAuthEndpoint": "",
@@ -408,7 +408,7 @@
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": false
+				"skake": true
 			},
 			"selected": true,
 			"dragging": false,
