@@ -34,13 +34,13 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: uid, message: \"Authentication sucess! \"}",
+					"returnVariable": "{ userId: inum, message: \"Authentication sucess! \"}",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Finish with success"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 4238,
@@ -343,8 +343,8 @@
 			}
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
 			"position": {
 				"x": 3823,
@@ -408,9 +408,9 @@
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3823,
@@ -2420,8 +2420,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1335.8416646321616,
-		"y": 71.79999987284339,
-		"zoom": 0.5
+		"x": -2386,
+		"y": -135,
+		"zoom": 0.75
 	}
 }
