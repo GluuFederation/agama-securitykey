@@ -35,8 +35,10 @@
 					"comment": "",
 					"flowfilename": "",
 					"returnVariable": "{ userId: uid, message: \"Authentication sucess! \"}",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Finish with success"
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -263,7 +265,7 @@
 					"maxIterationVariableName": "",
 					"logLevel": "",
 					"assignCallbackResult": "",
-					"displayName": "Finish uid",
+					"displayName": "Finish with error",
 					"nodeColor": "",
 					"exceptionVariableField": "",
 					"finishMode": "withFailure",
