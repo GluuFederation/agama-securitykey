@@ -5,7 +5,7 @@
 			"height": 123,
 			"id": "finish-8d28dab4-7c70-4cb6-b8f0-7d20599b9988",
 			"position": {
-				"x": 4088,
+				"x": 4238,
 				"y": 471
 			},
 			"type": "finish",
@@ -22,7 +22,7 @@
 					"Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.OTHERWISE"
 				],
 				"position": {
-					"x": 4088,
+					"x": 4238,
 					"y": 471
 				},
 				"agamaData": {
@@ -43,7 +43,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 4088,
+				"x": 4238,
 				"y": 471
 			}
 		},
@@ -207,7 +207,7 @@
 			"height": 123,
 			"id": "finish-35163906-b1cf-4a51-aad2-e091c4a86a25",
 			"position": {
-				"x": 4080,
+				"x": 4230,
 				"y": 663
 			},
 			"type": "finish",
@@ -222,7 +222,7 @@
 					"Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.SUCCESS"
 				],
 				"position": {
-					"x": 4080,
+					"x": 4230,
 					"y": 663
 				},
 				"agamaData": {
@@ -278,7 +278,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 4080,
+				"x": 4230,
 				"y": 663
 			}
 		},
@@ -287,7 +287,7 @@
 			"height": 60,
 			"id": "Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018",
 			"position": {
-				"x": 3889.333333333333,
+				"x": 4039.333333333333,
 				"y": 525
 			},
 			"parentId": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
@@ -299,7 +299,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 3889.333333333333,
+					"x": 4039.333333333333,
 					"y": 525
 				},
 				"agamaData": {
@@ -335,10 +335,10 @@
 				],
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3889.333333333333,
+				"x": 4039.333333333333,
 				"y": 525
 			}
 		},
@@ -347,7 +347,7 @@
 			"height": 123,
 			"id": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
 			"position": {
-				"x": 3673,
+				"x": 3823,
 				"y": 475
 			},
 			"type": "log",
@@ -358,7 +358,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 3673,
+					"x": 3823,
 					"y": 475
 				},
 				"agamaData": {
@@ -413,7 +413,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3673,
+				"x": 3823,
 				"y": 475
 			}
 		},
@@ -1525,89 +1525,6 @@
 		{
 			"width": 170,
 			"height": 123,
-			"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
-			"position": {
-				"x": 3475,
-				"y": 474
-			},
-			"type": "trigger",
-			"data": {
-				"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
-				"type": "Agama-trigger-Node",
-				"parentId": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
-				"whenCondition": "",
-				"inRepeatBlock": "",
-				"position": {
-					"x": 3475,
-					"y": 474
-				},
-				"agamaData": {
-					"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
-					"type": "Agama-trigger-Node",
-					"hasSuccess": false,
-					"hasFailure": false,
-					"hasRepeat": false,
-					"hasComment": true,
-					"hasNoRepeat": false,
-					"isTopLevelFlow": true,
-					"whenCondition": "WhenFalse",
-					"inRepeatBlock": true,
-					"parentId": "Agama-when-Node-f506e361-5ab3-499c-bb6b-e0ccc49e5ad1",
-					"name": "",
-					"basepath": "",
-					"comment": "",
-					"notes": "",
-					"flowfilename": "",
-					"assignments": [
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "",
-							"assignedVariableName": ""
-						}
-					],
-					"callType": "Call static method",
-					"arguments": [
-						"userData",
-						"withEscape"
-					],
-					"logMessage": "",
-					"templatePath": "",
-					"maxIteration": "",
-					"idpAuthEndpoint": "",
-					"variableField": "",
-					"conditionInputField": "",
-					"valueField": "",
-					"returnVariable": "",
-					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
-					"maxIterationVariableName": "",
-					"logLevel": "",
-					"assignCallbackResult": "",
-					"displayName": "FidoAuthn trigger",
-					"nodeColor": "",
-					"exceptionVariableField": "",
-					"hasExtraData": false,
-					"configParams": "{}",
-					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.securitykey.fidoAuthn",
-					"asssignedVariableName": "fidoAuthn"
-				},
-				"skake": false
-			},
-			"selected": false,
-			"dragging": false,
-			"positionAbsolute": {
-				"x": 3475,
-				"y": 474
-			},
-			"parentId": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
-			"whenCondition": "",
-			"inRepeatBlock": ""
-		},
-		{
-			"width": 170,
-			"height": 123,
 			"id": "Agama-log-Node-ced6f3aa-230e-4cb3-a223-457dd23de03c",
 			"position": {
 				"x": 2414,
@@ -1916,6 +1833,136 @@
 			"parentId": "Agama-log-Node-b731280f-7322-49ff-b8ea-052cc933a0ba",
 			"whenCondition": "",
 			"inRepeatBlock": ""
+		},
+		{
+			"width": 170,
+			"height": 123,
+			"id": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+			"position": {
+				"x": 3449.3333333333335,
+				"y": 302
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 3449.3333333333335,
+					"y": 302
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+					"parentId": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
+					"type": "Agama-log-Node",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"logMessage": "\"Just logging *********************\"",
+					"logLevel": "trace",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": 3449.3333333333335,
+				"y": 302
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 123,
+			"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
+			"position": {
+				"x": 3625,
+				"y": 474
+			},
+			"type": "trigger",
+			"data": {
+				"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
+				"type": "Agama-trigger-Node",
+				"parentId": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+				"whenCondition": "",
+				"inRepeatBlock": "",
+				"position": {
+					"x": 3625,
+					"y": 474
+				},
+				"agamaData": {
+					"id": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
+					"type": "Agama-trigger-Node",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasRepeat": false,
+					"hasComment": true,
+					"hasNoRepeat": false,
+					"isTopLevelFlow": true,
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": true,
+					"parentId": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+					"name": "",
+					"basepath": "",
+					"comment": "",
+					"notes": "",
+					"flowfilename": "",
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "",
+							"assignedVariableName": ""
+						}
+					],
+					"callType": "Call static method",
+					"arguments": [
+						"userData",
+						"withEscape"
+					],
+					"logMessage": "",
+					"templatePath": "",
+					"maxIteration": "",
+					"idpAuthEndpoint": "",
+					"variableField": "",
+					"conditionInputField": "",
+					"valueField": "",
+					"returnVariable": "",
+					"javaClassName": "",
+					"javaMethodName": "",
+					"javaVariableName": "",
+					"maxIterationVariableName": "",
+					"logLevel": "",
+					"assignCallbackResult": "",
+					"displayName": "FidoAuthn trigger",
+					"nodeColor": "",
+					"exceptionVariableField": "",
+					"hasExtraData": false,
+					"configParams": "{}",
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.securitykey.fidoAuthn",
+					"asssignedVariableName": "fidoAuthn",
+					"position": {
+						"x": 3625
+					}
+				},
+				"skake": false,
+				"inIterateBlock": ""
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3625,
+				"y": 474
+			},
+			"parentId": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+			"whenCondition": "",
+			"inRepeatBlock": "",
+			"inIterateBlock": ""
 		}
 	],
 	"edges": [
@@ -2233,23 +2280,6 @@
 			"sourceHandle": "Agama-when-Node-f506e361-5ab3-499c-bb6b-e0ccc49e5ad1.FAILURE"
 		},
 		{
-			"id": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4-Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4-217477c6-767b-4ea7-bb92-cd74edb5d978",
-			"type": "straight",
-			"source": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
-			"target": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#FFCC00",
-				"color": "#fff",
-				"fillOpacity": 0.7
-			}
-		},
-		{
 			"id": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4-Agama-log-Node-ced6f3aa-230e-4cb3-a223-457dd23de03c-b6291f0a-efb2-48e5-b1d9-2b9b697b1ac4",
 			"type": "straight",
 			"source": "Agama-call-Node-ce503f35-ef74-42d5-bdaa-d0de9618ffc4",
@@ -2352,11 +2382,45 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018.FAILURE"
+		},
+		{
+			"id": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4-Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0-37f1a8d6-01e3-45a6-a7b3-2cf9c34f33b8",
+			"type": "default",
+			"source": "Agama-assignment-Node-4ce21e85-93a1-4c4b-9d46-1487f7b20cc4",
+			"target": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0-Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4-79be92ea-81ca-42af-bc4d-f14a26114b2b",
+			"type": "default",
+			"source": "Agama-log-Node-f67b353d-9197-46bc-96ec-7b6e2ec801a0",
+			"target": "Agama-trigger-Node-118e8cc7-12f5-4c84-88cb-27340124f1c4",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -2276,
-		"y": -178,
+		"x": -2053,
+		"y": -182,
 		"zoom": 0.75
 	}
 }
