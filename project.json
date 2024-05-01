@@ -18,7 +18,8 @@
     "noDirectLaunch": [],
     "configs": {
         "org.gluu.agama.securitykey.fidoAuthn": {},
-        "org.gluu.agama.securitykey.main": {}
+        "org.gluu.agama.securitykey.main": {},
+        "": {}
     },
     "name": "agama-securitykey"
 }
