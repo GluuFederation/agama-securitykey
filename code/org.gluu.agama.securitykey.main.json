@@ -40,7 +40,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 4238,
@@ -258,7 +258,7 @@
 					"variableField": "",
 					"conditionInputField": "",
 					"valueField": "",
-					"returnVariable": "uid",
+					"returnVariable": "inum",
 					"javaClassName": "",
 					"javaMethodName": "",
 					"javaVariableName": "",
@@ -275,7 +275,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 4230,
