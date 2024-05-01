@@ -40,7 +40,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 4088,
@@ -287,7 +287,7 @@
 			"height": 60,
 			"id": "Agama-when-Node-d871f2c0-b007-42bf-8859-d8cd34bc5018",
 			"position": {
-				"x": 3888,
+				"x": 3889.333333333333,
 				"y": 525
 			},
 			"parentId": "Agama-log-Node-6c7bf514-0783-4793-997e-4fe611846373",
@@ -299,7 +299,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 3888,
+					"x": 3889.333333333333,
 					"y": 525
 				},
 				"agamaData": {
@@ -322,8 +322,8 @@
 					"conditions": [
 						{
 							"variable": "fidoAuthn.success",
-							"operator": "is",
-							"dataValue": "false",
+							"operator": "is not",
+							"dataValue": "true",
 							"combinator": "none"
 						}
 					],
@@ -335,10 +335,10 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 3888,
+				"x": 3889.333333333333,
 				"y": 525
 			}
 		},
@@ -2355,8 +2355,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2373,
-		"y": -117,
+		"x": -2276,
+		"y": -178,
 		"zoom": 0.75
 	}
 }
