@@ -16,9 +16,9 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_fovbq = {success:false, error: "Your account has no security key configured."}
-               Finish it_fovbq
+               it_esxid = {success:false, error: "Your account has no security key configured."}
+               Finish it_esxid
           withEscape = true
      loginForm.success = false
-it_khiuu = {success:false, error: "Login attempt exceeded."}
-Finish it_khiuu
+it_kghwo = {success:false, error: "Login attempt exceeded."}
+Finish it_kghwo
