@@ -34,11 +34,12 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: inum, message: \"Authentication sucess! \"}",
+					"returnVariable": "{ userId: uid, message: \"Authentication sucess! \"}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Success"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -2388,8 +2389,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1834.8231762054534,
-		"y": -54.73493638667395,
-		"zoom": 0.5683937124413994
+		"x": -2080,
+		"y": -151,
+		"zoom": 0.75
 	}
 }
