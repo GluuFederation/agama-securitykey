@@ -16,9 +16,17 @@ Repeat 3 times max
           count = mfaInfo.count
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_mejgz = {success:false, error: "Your account has no security key configured."}
-               Finish it_mejgz
+               it_qhpgt = {success:false, error: "Your account has no security key configured."}
+               Finish it_qhpgt
           withEscape = true
+          Log "@trace Just logging *********************"
+          fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
+          Log "@debug Response FidoAuthn %" fidoAuthn
+          When fidoAuthn.success is not true
+               it_mytax = {success:false, error: "uid"}
+               Finish it_mytax
+          it_yctde = undefined
+          Finish it_yctde
      loginForm.success = false
-it_sskyo = {success:false, error: "Login attempt exceeded."}
-Finish it_sskyo
+it_fwuwj = {success:false, error: "Login attempt exceeded."}
+Finish it_fwuwj
