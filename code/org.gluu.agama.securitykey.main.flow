@@ -1,14 +1,24 @@
+// Main flow that handles all other flows
 Flow org.gluu.agama.securitykey.main
      Basepath ""
+// Mark startup logs
 Log "@debug Main flow started!"
+// loginForm variable declaration, which is sent to the main form
 loginForm = { success: true }
+// Get instance CasaApi
 casaApi = Call org.gluu.agama.securitykey.CasaApi#new 
+// Repeat a maximum of 3 times
 Repeat 3 times max
+     // Load main.ftlh page and pass loginForm
      creds = RRF "main.ftlh" loginForm
+     // Retrieves the user's information by username
      userData = Call org.gluu.agama.securitykey.IdentityProcessor#accountFromUid creds.username
+     // Mark logs of collected user data
      Log "@debug UserData %" userData
+     // Assign loginForm.username = creds.username
      loginForm.username = creds.username
      When userData is not null
+          // Initialization of inum and uid
           inum = userData.inum
           uid = userData.uid
           mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
@@ -19,7 +29,7 @@ Repeat 3 times max
                it_yhkbt = {success:false, error: "Your account has no security key configured."}
                Finish it_yhkbt
           withEscape = true
-          Log "@trace Just logging *********************"
+          
           fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
           Log "@debug Response FidoAuthn % % " fidoAuthn  fidoAuthn.success
           When fidoAuthn.success is not true
@@ -28,6 +38,8 @@ Repeat 3 times max
           Otherwise
                it_ssvhe = {success:true, data: { userId: uid, message: "Authentication sucess! "}}
                Finish it_ssvhe
+     // Set the loginForm success field to false
      loginForm.success = false
 it_talkb = {success:false, error: "Login attempt exceeded."}
 Finish it_talkb
+   

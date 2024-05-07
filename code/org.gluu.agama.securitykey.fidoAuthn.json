@@ -1,8 +1,33 @@
 {
 	"nodes": [
 		{
+			"width": 270,
+			"height": 68,
+			"id": "Agama-note-b2a6b60c-094c-4cb6-aa8b-36ef4906592b",
+			"position": {
+				"x": 1181,
+				"y": -50
+			},
+			"type": "notes",
+			"data": {
+				"id": "Agama-note-b2a6b60c-094c-4cb6-aa8b-36ef4906592b",
+				"type": "Agama-note",
+				"notes": "If the customer cancels the validation process the flow ends, otherwise the validation flow continues.",
+				"position": {
+					"x": 1181,
+					"y": -50
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": 1181,
+				"y": -50
+			},
+			"dragging": false
+		},
+		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "finish-2a56b16a-c2c1-41af-ae9b-a13af37a9d0a",
 			"position": {
 				"x": 1685,
@@ -34,7 +59,7 @@
 					"parentId": "Agama-call-Node-1aeb4a1a-0c47-4fe9-8e9d-ce6078806f5b",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Ends the flow correctly",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -79,7 +104,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-1aeb4a1a-0c47-4fe9-8e9d-ce6078806f5b",
 			"position": {
 				"x": 1485,
@@ -110,12 +135,14 @@
 					"parentId": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Performs the verification after processing the security device",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [],
 					"callType": "Call method on instance",
-					"arguments": "obj.tokenResponse",
+					"arguments": [
+						"obj.tokenResponse"
+					],
 					"logMessage": "",
 					"templatePath": "",
 					"maxIteration": "",
@@ -149,7 +176,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "finish-de636519-7305-41a5-89ae-c11536a5c7e1",
 			"position": {
 				"x": 1486,
@@ -211,7 +238,7 @@
 					"logLevel": "",
 					"assignCallbackResult": "",
 					"displayName": "Finish false",
-					"nodeColor": "",
+					"nodeColor": "#eb999a",
 					"exceptionVariableField": "",
 					"finishMode": "withFailure",
 					"hasExtraData": false,
@@ -220,7 +247,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1486,
 				"y": 232
@@ -228,11 +255,11 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"position": {
-				"x": 1235,
+				"x": 1236.5,
 				"y": 81
 			},
 			"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
@@ -244,7 +271,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1235,
+					"x": 1236.5,
 					"y": 81
 				},
 				"agamaData": {
@@ -264,7 +291,15 @@
 					"valueField": "\"\"",
 					"hasComment": true,
 					"hasSuccess": true,
-					"hasFailure": true
+					"hasFailure": true,
+					"conditions": [
+						{
+							"variable": "obj.skipped",
+							"operator": "is",
+							"dataValue": "\"\"",
+							"combinator": "none"
+						}
+					]
 				},
 				"handles": [
 					"Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c.FAILURE",
@@ -275,13 +310,13 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1235,
+				"x": 1236.5,
 				"y": 81
 			}
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 			"position": {
 				"x": 1030,
@@ -312,7 +347,7 @@
 					"parentId": "Agama-assignment-Node-7d6402d1-120f-498c-b174-77079338be46",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Load fido-authn page and pass \"obj\"",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -323,7 +358,9 @@
 						}
 					],
 					"callType": "Call static method",
-					"arguments": "obj",
+					"arguments": [
+						"obj"
+					],
 					"logMessage": "",
 					"templatePath": "fido-authn.ftlh",
 					"maxIteration": "",
@@ -357,7 +394,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-assignment-Node-7d6402d1-120f-498c-b174-77079338be46",
 			"position": {
 				"x": 830,
@@ -388,7 +425,7 @@
 					"parentId": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "\"obj\" variable declaration to be sent to validation view",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -432,10 +469,10 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-76a3dde3-a6d8-402e-b411-d6835539ea6b",
 			"position": {
-				"x": 630,
+				"x": 629,
 				"y": 27
 			},
 			"type": "call",
@@ -446,7 +483,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 630,
+					"x": 629,
 					"y": 27
 				},
 				"agamaData": {
@@ -463,7 +500,7 @@
 					"parentId": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Generates the assertionRequest record to initiate validation",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -502,17 +539,17 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 630,
+				"x": 629,
 				"y": 27
 			}
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
 			"position": {
 				"x": 430,
-				"y": 28
+				"y": 27.5
 			},
 			"type": "call",
 			"data": {
@@ -523,7 +560,7 @@
 				"inRepeatBlock": false,
 				"position": {
 					"x": 430,
-					"y": 28
+					"y": 27.5
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-1d2f9128-9f25-4431-82d3-131b569ce7e3",
@@ -539,7 +576,7 @@
 					"parentId": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Get instance FidoValidator",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -579,12 +616,12 @@
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 430,
-				"y": 28
+				"y": 27.5
 			}
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-log-Node-33b6b4ce-5a64-42ae-bec5-5d4e945ef211",
 			"position": {
 				"x": 230,
@@ -615,7 +652,7 @@
 					"parentId": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "Mark startup logs",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -659,7 +696,7 @@
 		},
 		{
 			"width": 170,
-			"height": 122,
+			"height": 124,
 			"id": "Agama-start-Flow-b152daa8-8e5d-4204-9518-3c11143edcfc",
 			"type": "start",
 			"sourcePosition": "right",
@@ -683,7 +720,7 @@
 					"inRepeatBlock": false,
 					"name": "",
 					"basepath": "",
-					"comment": "",
+					"comment": "This flow is responsible for validation with the security key device",
 					"notes": "",
 					"flowfilename": "",
 					"assignments": [
@@ -716,7 +753,8 @@
 					"configParams": "{}",
 					"flowname": "org.gluu.agama.securitykey.fidoAuthn",
 					"nodeIcon": "material-symbols:line-start-square",
-					"inputs": "userData withEscape"
+					"inputs": "userData withEscape",
+					"timeout": ""
 				},
 				"skake": false
 			},
@@ -907,8 +945,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1053,
-		"y": 23,
-		"zoom": 1
+		"x": 147.32377000284862,
+		"y": 131.7641905356587,
+		"zoom": 0.6241652744508059
 	}
 }
