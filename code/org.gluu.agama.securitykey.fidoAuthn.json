@@ -16,9 +16,10 @@
 				"position": {
 					"x": 1181,
 					"y": -50
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1181,
 				"y": -50
@@ -259,8 +260,8 @@
 			"height": 60,
 			"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
 			"position": {
-				"x": 1236.5,
-				"y": 81
+				"x": 228.5,
+				"y": 46.33333333333337
 			},
 			"parentId": "Agama-rrf-Node-3bf36af3-e361-4efa-855b-a2309c79a796",
 			"type": "when",
@@ -271,8 +272,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1236.5,
-					"y": 81
+					"x": 228.5,
+					"y": 46.33333333333337
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-0a9b8e2a-907c-447a-b594-37a311fc7d2c",
@@ -307,11 +308,11 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1236.5,
-				"y": 81
+				"x": 1258.5,
+				"y": 73.33333333333337
 			}
 		},
 		{
@@ -945,8 +946,8 @@
 		}
 	],
 	"viewport": {
-		"x": 147.32377000284862,
-		"y": 131.7641905356587,
-		"zoom": 0.6241652744508059
+		"x": -20,
+		"y": 227,
+		"zoom": 0.75
 	}
 }
