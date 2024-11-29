@@ -21,8 +21,30 @@ Repeat 3 times max
           // Initialization of inum and uid
           inum = userData.inum
           uid = userData.uid
+          // Gets the number of security key devices registered by the user.
+          mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          // Logs of the number of registered devices
+          Log "@debug MfaInfo response: %" mfaInfo
+          // Variable count declaration
+          count = mfaInfo.count
+          // Mark the user's logs and the number of devices he/she has registered.
+          Log "@debug User % has % credentials enrolled" inum count
+          When count is 0
+               // Ended the flow if you have no registered positives.
+               it_pzlzm = {success:false, error: "Your account has no security key configured."}
+               Finish it_pzlzm
+          // Assign withEscape = true
+          withEscape = true
+          // FIDO authentication flow
+          fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
+          // Mark logs Authentication flow response executed
+          Log "@debug Response FidoAuthn %" fidoAuthn
+          When fidoAuthn.success is true
+               // Finish flow with return uid
+               it_uzkok = {success:false, error: "uid"}
+               Finish it_uzkok
      // Set the loginForm success field to false
      loginForm.success = false
 // When the maximum number of attempts has been made, the flow will end.
-it_kmlfs = {success:false, error: "Login attempt exceeded."}
-Finish it_kmlfs
+it_wntzh = {success:false, error: "Login attempt exceeded."}
+Finish it_wntzh
