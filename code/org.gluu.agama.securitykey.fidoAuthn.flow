@@ -1,12 +1,22 @@
+// This flow is responsible for validation with the security key device
 Flow org.gluu.agama.securitykey.fidoAuthn
      Basepath ""
      Inputs userData withEscape
+// Mark startup logs
 Log "@debug Fido Authn flow started!"
-jose = Call org.gluu.agama.securitykey.authn.FidoValidator#new
+// Get instance FidoValidator
+jose = Call org.gluu.agama.securitykey.authn.FidoValidator#new 
+// Generates the assertionRequest record to initiate validation
 assertion = Call jose assertionRequest userData.uid
+// "obj" variable declaration to be sent to validation view
 obj = { name: userData.name, escape: withEscape, assertion: assertion }
+// Load fido-authn page and pass "obj"
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
-     Finish false
+     it_tofvw = {success:false, error: "false"}
+     Finish it_tofvw
+// Performs the verification after processing the security device
 obj = Call jose verify obj.tokenResponse
-Finish true
+// Ends the flow correctly
+it_exzft = {success:false, error: "true"}
+Finish it_exzft

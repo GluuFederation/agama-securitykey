@@ -12,13 +12,15 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static io.jans.inbound.Attrs.*;
-
 public class IdentityProcessor {
 
     private static final Logger logger = LoggerFactory.getLogger(IdentityProcessor.class);
 
     private static final String INUM_ATTR = "inum";
+    private static final String UID = "uid";
+    private static final String GIVEN_NAME = "givenName";
+    private static final String DISPLAY_NAME = "displayName";
+    private static final String MAIL = "mail";
 
     public static Map<String, String> accountFromUid(String uid) {
         User user = getUser(UID, uid);

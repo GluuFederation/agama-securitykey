@@ -1,28 +1,50 @@
+// Main flow that handles all other flows
 Flow org.gluu.agama.securitykey.main
      Basepath ""
+// Mark startup logs
 Log "@debug Main flow started!"
+// loginForm variable declaration, which is sent to the main form
 loginForm = { success: true }
-casaApi = Call org.gluu.agama.securitykey.CasaApi#new
+// Get instance CasaApi
+casaApi = Call org.gluu.agama.securitykey.CasaApi#new 
+// Repeat a maximum of 3 times
 Repeat 3 times max
+     // Load main.ftlh page and pass loginForm
      creds = RRF "main.ftlh" loginForm
+     // Retrieves the user's information by username
      userData = Call org.gluu.agama.securitykey.IdentityProcessor#accountFromUid creds.username
+     // Mark logs of collected user data
      Log "@debug UserData %" userData
+     // Assign loginForm.username = creds.username
      loginForm.username = creds.username
      When userData is not null
+          // Initialization of inum and uid
           inum = userData.inum
           uid = userData.uid
+          // Gets the number of security key devices registered by the user.
           mfaInfo = Call casaApi getMFAUserInfoByFido2 inum
+          // Logs of the number of registered devices
           Log "@debug MfaInfo response: %" mfaInfo
+          // Variable count declaration
           count = mfaInfo.count
+          // Mark the user's logs and the number of devices he/she has registered.
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
-               it_aagka = { success: false, error: "Your account has no security key configured." }
-               Finish it_aagka
+               // Ended the flow if you have no registered positives.
+               it_pzlzm = {success:false, error: "Your account has no security key configured."}
+               Finish it_pzlzm
+          // Assign withEscape = true
           withEscape = true
+          // FIDO authentication flow
           fidoAuthn = Trigger org.gluu.agama.securitykey.fidoAuthn userData withEscape
+          // Mark logs Authentication flow response executed
           Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
-               Finish uid
+               // Finish flow with return uid
+               it_uzkok = {success:false, error: "uid"}
+               Finish it_uzkok
+     // Set the loginForm success field to false
      loginForm.success = false
-it_sxdfm = { success: false, error: "Login attempt exceeded." }
-Finish it_sxdfm
+// When the maximum number of attempts has been made, the flow will end.
+it_wntzh = {success:false, error: "Login attempt exceeded."}
+Finish it_wntzh
