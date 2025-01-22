@@ -30,8 +30,9 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
-			}
+				"height": 123
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -60,7 +61,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -95,7 +96,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -130,7 +131,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -160,7 +161,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -192,7 +193,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -226,7 +227,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -263,7 +264,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -293,7 +294,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -328,7 +329,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -396,7 +397,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -437,7 +438,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -474,7 +475,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -504,7 +505,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -539,7 +540,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -569,7 +570,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -633,7 +634,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -669,7 +670,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -704,7 +705,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -734,7 +735,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
+				"height": 123
 			}
 		},
 		{
@@ -777,8 +778,8 @@
 					"displayName": "Finish uid",
 					"hasComment": true,
 					"comment": "Finish flow with return uid",
-					"returnVariable": "uid",
-					"finishMode": "withFailure",
+					"returnVariable": "{ userId: uid}",
+					"finishMode": "withSuccess",
 					"exceptionVariableField": ""
 				},
 				"id": "finishNode-2654ebfa-c0e4-4370-ad38-f86eb667bcda",
@@ -798,8 +799,9 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 124
-			}
+				"height": 123
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1242,8 +1244,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0.6911938336495496,
-		"y": 9.261144547374954,
-		"zoom": 0.5
+		"x": -4614,
+		"y": -622,
+		"zoom": 1
 	}
 }
