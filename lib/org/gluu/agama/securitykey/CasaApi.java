@@ -15,7 +15,7 @@ public class CasaApi extends CasaWSBase {
 
     private static final String SCOPE_CONFIG = SCOPE_PREFIX + "casa.config";
     private static final String SCOPE_2FA = SCOPE_PREFIX + "casa.2fa";
-
+    private static final Logger logger = LoggerFactory.getLogger(CasaApi.class);
     public CasaApi() throws IOException {
         super(true);
         setScope(SCOPE_CONFIG + " " + SCOPE_2FA);
@@ -35,11 +35,14 @@ public class CasaApi extends CasaWSBase {
             StringJoiner joiner = new StringJoiner("&");
             methods.forEach(m -> joiner.add("m=" + m));
             request.setQuery(joiner.toString());
+            logger.info(joiner.toString())
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
             ObjectMapper mapper = new ObjectMapper();
+            logger.info(response);
             return mapper.convertValue(response, MFAUserInfo.class);
 
         } catch (Exception e) {
+            logger.info(e.getMessage());
             throw new IOException("Unable to determine the amount of enrolled credentials", e);
         }
     }
