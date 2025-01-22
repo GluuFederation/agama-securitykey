@@ -13,10 +13,10 @@ obj = { name: userData.name, escape: withEscape, assertion: assertion }
 // Load fido-authn page and pass "obj"
 obj = RRF "fido-authn.ftlh" obj
 When obj.skipped is ""
-     it_tofvw = {success:false, error: "false"}
-     Finish it_tofvw
+     it_trqns = {success:false, error: "false"}
+     Finish it_trqns
 // Performs the verification after processing the security device
 obj = Call jose verify obj.tokenResponse
 // Ends the flow correctly
-it_exzft = {success:false, error: "true"}
-Finish it_exzft
+it_pefzh = {success:false, error: "true"}
+Finish it_pefzh
