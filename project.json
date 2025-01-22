@@ -15,7 +15,9 @@
         "fido2",
         "securitykey"
     ],
-    "noDirectLaunch": [],
+    "noDirectLaunch": [
+        "org.gluu.agama.securitykey.fidoAuthn"
+    ],
     "configs": {
         "org.gluu.agama.securitykey.fidoAuthn": {},
         "org.gluu.agama.securitykey.main": {}
