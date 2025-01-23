@@ -48,7 +48,7 @@ public class FidoValidator {
         assertionRequest.setUsername(uid);
         
         try (Response response = assertionService.authenticate(assertionRequest)) {
-            content = response.readEntity(String.class);
+            String content = response.readEntity(String.class);
             int status = response.getStatus();
 
             if (status != Response.Status.OK.getStatusCode()) {
