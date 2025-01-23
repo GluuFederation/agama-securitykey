@@ -3,6 +3,7 @@ package org.gluu.agama.securitykey.authn;
 import io.jans.fido2.client.AssertionService;
 import io.jans.fido2.client.Fido2ClientFactory;
 import io.jans.fido2.model.assertion.AssertionOptions;
+import io.jans.fido2.model.assertion.AssertionResult;
 import jakarta.ws.rs.core.Response;
 
 import java.io.IOException;
