@@ -64,7 +64,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -99,7 +100,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -134,7 +136,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -169,7 +172,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -202,7 +206,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -283,8 +288,8 @@
 					"displayName": "Finish true",
 					"hasComment": true,
 					"comment": "Ends the flow correctly",
-					"returnVariable": "obj",
-					"finishMode": "withVariable",
+					"returnVariable": "{ userId: userData.uid }",
+					"finishMode": "withSuccess",
 					"exceptionVariableField": ""
 				},
 				"id": "finishNode-d58ab8a6-a05b-427f-bfa7-6e2f2b28da06",
@@ -514,8 +519,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1214,
-		"y": -116,
+		"x": -1277,
+		"y": -137,
 		"zoom": 1
 	}
 }
