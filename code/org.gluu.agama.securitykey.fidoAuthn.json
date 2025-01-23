@@ -31,9 +31,9 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"deletable": false
 		},
 		{
@@ -63,7 +63,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		},
 		{
@@ -98,7 +98,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		},
 		{
@@ -133,7 +133,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		},
 		{
@@ -168,7 +168,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		},
 		{
@@ -201,7 +201,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		},
 		{
@@ -271,8 +271,9 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
-			}
+				"height": 124
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -282,8 +283,8 @@
 					"displayName": "Finish true",
 					"hasComment": true,
 					"comment": "Ends the flow correctly",
-					"returnVariable": "true",
-					"finishMode": "withFailure",
+					"returnVariable": "obj",
+					"finishMode": "withVariable",
 					"exceptionVariableField": ""
 				},
 				"id": "finishNode-d58ab8a6-a05b-427f-bfa7-6e2f2b28da06",
@@ -302,8 +303,9 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
-			}
+				"height": 124
+			},
+			"selected": true
 		},
 		{
 			"data": {
@@ -334,7 +336,7 @@
 			},
 			"measured": {
 				"width": 170,
-				"height": 123
+				"height": 124
 			}
 		}
 	],
@@ -512,8 +514,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -1214,
+		"y": -116,
 		"zoom": 1
 	}
 }
