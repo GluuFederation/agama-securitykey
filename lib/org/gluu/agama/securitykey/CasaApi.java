@@ -3,7 +3,8 @@ package org.gluu.agama.securitykey;
 import com.nimbusds.oauth2.sdk.http.HTTPRequest;
 import com.nimbusds.oauth2.sdk.http.HTTPResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
