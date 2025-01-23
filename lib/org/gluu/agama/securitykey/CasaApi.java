@@ -39,7 +39,7 @@ public class CasaApi extends CasaWSBase {
             logger.info(joiner.toString())
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
             ObjectMapper mapper = new ObjectMapper();
-            logger.info(response);
+            
             return mapper.convertValue(response, MFAUserInfo.class);
 
         } catch (Exception e) {
