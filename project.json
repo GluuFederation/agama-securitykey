@@ -3,7 +3,7 @@
     "description": "Agama SecurityKey",
     "type": "community",
     "author": "Milton-Ch",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "authorWebsite": "https://github.com/GluuFederation/agama-securitykey",
     "githubUri": "https://github.com/GluuFederation/agama-securitykey",
     "license": "apache-2.0",
