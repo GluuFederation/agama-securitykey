@@ -2,7 +2,7 @@ package org.gluu.agama.securitykey.authn;
 
 import io.jans.fido2.client.AssertionService;
 import io.jans.fido2.client.Fido2ClientFactory;
-
+import io.jans.fido2.model.assertion.AssertionOptions;
 import jakarta.ws.rs.core.Response;
 
 import java.io.IOException;
@@ -42,9 +42,11 @@ public class FidoValidator {
         logger.debug("Building an assertion request for {}", uid);
         //Using assertionService as a private class field gives serialization trouble...
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
-        String content = JSONObject.toJSONString(Map.of("username", uid));
-
-        try (Response response = assertionService.authenticate(content)) {
+        
+        AssertionOptions assertionRequest = new AssertionOptions();
+        assertionRequest.setUsername(uid);
+        
+        try (Response response = assertionService.authenticate(assertionRequest)) {
             content = response.readEntity(String.class);
             int status = response.getStatus();
 
@@ -60,8 +62,10 @@ public class FidoValidator {
     public void verify(String tokenResponse) throws IOException {
         logger.debug("Verifying fido token response");
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
-
-        try (Response response = assertionService.verify(tokenResponse)) {
+        
+        AssertionResult assertionResult = mapper.readValue(tokenResponse, AssertionResult.class);
+        
+        try (Response response = assertionService.verify(assertionResult)) {
             int status = response.getStatus();
 
             if (status != Response.Status.OK.getStatusCode()) {
