@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class FidoValidator {
 
     private static final Logger logger = LoggerFactory.getLogger(FidoValidator.class);
-    private ObjectMapper mapper = new ObjectMapper();
+    
     private String metadataConfiguration;
 
     public FidoValidator() throws IOException {
@@ -63,7 +63,7 @@ public class FidoValidator {
     public void verify(String tokenResponse) throws IOException {
         logger.debug("Verifying fido token response");
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
-        
+        ObjectMapper mapper = new ObjectMapper();
         AssertionResult assertionResult = mapper.readValue(tokenResponse, AssertionResult.class);
         
         try (Response response = assertionService.verify(assertionResult)) {
