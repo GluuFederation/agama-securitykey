@@ -49,6 +49,6 @@ public class CasaApi extends CasaWSBase {
     }
 
     public MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
-        return getMFAUserInfo(personUid, Collections.singleton("io.jans.casa.authn.fido2");
+        return getMFAUserInfo(personUid, Collections.singleton("io.jans.casa.authn.fido2"));
     }
 }
