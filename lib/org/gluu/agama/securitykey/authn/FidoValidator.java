@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class FidoValidator {
 
     private static final Logger logger = LoggerFactory.getLogger(FidoValidator.class);
-
+    private static ObjectMapper mapper = new ObjectMapper();
     private String metadataConfiguration;
 
     public FidoValidator() throws IOException {
