@@ -31,8 +31,8 @@ Repeat 3 times max
           Log "@debug User % has % credentials enrolled" inum count
           When count is 0
                // Ended the flow if you have no registered positives.
-               it_pzlzm = {success:false, error: "Your account has no security key configured."}
-               Finish it_pzlzm
+               it_miprz = {success:false, error: "Your account has no security key configured."}
+               Finish it_miprz
           // Assign withEscape = true
           withEscape = true
           // FIDO authentication flow
@@ -41,10 +41,10 @@ Repeat 3 times max
           Log "@debug Response FidoAuthn %" fidoAuthn
           When fidoAuthn.success is true
                // Finish flow with return uid
-               it_uzkok = {success:false, error: "uid"}
-               Finish it_uzkok
+               it_fxexb = {success:true, data: { userId: uid}}
+               Finish it_fxexb
      // Set the loginForm success field to false
      loginForm.success = false
 // When the maximum number of attempts has been made, the flow will end.
-it_wntzh = {success:false, error: "Login attempt exceeded."}
-Finish it_wntzh
+it_mngtb = {success:false, error: "Login attempt exceeded."}
+Finish it_mngtb

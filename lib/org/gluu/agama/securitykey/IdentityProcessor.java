@@ -25,7 +25,7 @@ public class IdentityProcessor {
     public static Map<String, String> accountFromUid(String uid) {
         User user = getUser(UID, uid);
         boolean local = user != null;
-        logger.debug("There is {} local account for {}", local ? "a" : "no", uid);
+        logger.info("There is {} local account for {}", local ? "a" : "no", uid);
 
         if (local) {
             String inum = getSingleValuedAttr(user, INUM_ATTR);

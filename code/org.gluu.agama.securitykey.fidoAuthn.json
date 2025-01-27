@@ -3,7 +3,7 @@
 		{
 			"data": {
 				"agamaData": {
-					"isTopLevelFlow": true,
+					"isTopLevelFlow": false,
 					"basepath": "",
 					"configParams": "{}",
 					"creationDate": "29/11/2024",
@@ -32,7 +32,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"deletable": false
 		},
 		{
 			"data": {
@@ -62,7 +64,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -97,7 +100,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -132,7 +136,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -167,7 +172,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -200,7 +206,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -270,7 +277,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -280,8 +288,8 @@
 					"displayName": "Finish true",
 					"hasComment": true,
 					"comment": "Ends the flow correctly",
-					"returnVariable": "true",
-					"finishMode": "withFailure",
+					"returnVariable": "{ userId: userData.uid }",
+					"finishMode": "withSuccess",
 					"exceptionVariableField": ""
 				},
 				"id": "finishNode-d58ab8a6-a05b-427f-bfa7-6e2f2b28da06",
@@ -301,7 +309,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"data": {
@@ -510,8 +519,8 @@
 		}
 	],
 	"viewport": {
-		"x": 59.578919560714894,
-		"y": 71.77909306208602,
-		"zoom": 0.5904963307147654
+		"x": -1277,
+		"y": -137,
+		"zoom": 1
 	}
 }

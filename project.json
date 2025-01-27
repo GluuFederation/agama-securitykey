@@ -3,7 +3,7 @@
     "description": "Agama SecurityKey",
     "type": "community",
     "author": "Milton-Ch",
-    "version": "0.0.2",
+    "version": "1.0.3",
     "authorWebsite": "https://github.com/GluuFederation/agama-securitykey",
     "githubUri": "https://github.com/GluuFederation/agama-securitykey",
     "license": "apache-2.0",
@@ -15,7 +15,9 @@
         "fido2",
         "securitykey"
     ],
-    "noDirectLaunch": [],
+    "noDirectLaunch": [
+        "org.gluu.agama.securitykey.fidoAuthn"
+    ],
     "configs": {
         "org.gluu.agama.securitykey.fidoAuthn": {},
         "org.gluu.agama.securitykey.main": {}
